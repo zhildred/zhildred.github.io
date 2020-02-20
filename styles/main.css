@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    position: sticky;
+    background-color: lightblue;
+    height: 30px;
+    margin: auto;
+}
+
+header h2 {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
+main {
+    font-size: 18px;
+    text-align: center;
+}
+
+/*make it float to the left*/
+.post-index {
+    padding-right: 10px;
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+.post-index li {
+    padding: 5px;
+}
