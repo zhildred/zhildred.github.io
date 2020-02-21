@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Classes vs IDs</title>
+    <meta charset="UTF-8">
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <Body class="blog-post">
+    <h1>When to use classes or ids in HTML and CSS</h1>
+    <p>
+      In CSS we use things called selectors to target the style rules we write 
+      to particular elements in HTML. We can target HTML tags like 
+      <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code> directly, but we 
+      often want to only target a subset of elements that use a particular 
+      HTML tag.
+    </p>
+    <p>
+      In CSS there are two selectors that allow us to specify exactly which 
+      HTML elements a ruleset will be applied to. These are the class and id 
+      selectors. In HTML classes and ids are defined using the attributes 
+      “class” and “id”, like this:
+    </p>
+    <pre>
+      <code>
+        &lt;h2 class="sub-section" id="bio"&gt;Bio&lt;/h1&gt;
+      </code>
+    </pre>
+    <p>
+      In CSS a class selector is represented by a full stop “.”, while an id 
+      selector is represented by a hashtag “#”, like this:
+    </p>
+    <pre>
+      <code>
+        .sub-section {
+          font-size: 14px;
+        }
+
+        #bio {
+          color: red;
+        }
+      </code>
+    </pre>
+    <p>
+      Classes and ids may seem alike at first, but are not. It is best 
+      practice to use classes for rulesets that are (or might be) applied to 
+      multiple elements, while ids should be used to apply rulesets that will 
+      only ever be applied to a single specific element.
+    </p>
+    <p>
+      There are a number of reasons for this. In CSS both classes and ids are 
+      treated identically, except that id selectors take precedence over class 
+      selectors(both take precedence over element selectors). This is because 
+      selectors that are more specific take precedence over those that are 
+      more general, and as id should only be applied to a single element it is 
+      the most specific of all. This allows us to ensure that the rules we 
+      write specifically for this element will always override conflicting 
+      rules.
+    </p>
+    <p>
+      In HTML there are restrictions on the use of the id attribute that 
+      ensure that a particular id can only be attached to a single element. An 
+      element can have as many classes as we like, but it can only have one 
+      id. Classes can be used as many times as we like on one page, but each 
+      id can only be used once in a particular HTML document. This prevents us 
+      from accidentally creating duplicate ids.
+    </p>
+
+    <p>
+      One special function of ids is that they can be used in a URL to 
+      automatically scroll the page to a particular element when it is loaded. 
+      If you have ever seen a URL like: EXAMPLE, this is how they work. Ids 
+      also play an important role in javascript, where the function 
+      GetElementByID can be used to manipulate a specific element.
+    </p>
+    <p>
+      And while classes and ids are extremely useful, the best practice of all 
+      is to avoid using them if it is possible to without making your HTML 
+      confusing, for example instead of:
+    </p>
+    <pre>
+      <code>
+        &lt;div class="heading"&gt;
+      </code>
+    </pre>
+    <p>
+      You should try use an equivelant HTML tag like:
+    </p>
+    <pre>
+      <code>
+        &lt;header&gt;
+      </code>
+    </pre>
+  </Body>
+</html>

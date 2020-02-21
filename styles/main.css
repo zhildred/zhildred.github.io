@@ -24,6 +24,11 @@ main {
     text-align: center;
 }
 
+.blog-post {
+    padding-left: 10px;
+    max-width: 800px;
+}
+
 /*make it float to the left*/
 .post-index {
     padding-right: 10px;
